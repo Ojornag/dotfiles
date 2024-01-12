@@ -1,0 +1,11 @@
+#!/bin/sh
+
+applications=$(ls /usr/share/applications/)
+for app in $applications; do
+	name=$(cat /usr/share/applications/$app | grep "Name=\|Name\[en" | head -1 | sed 's/.*=//')
+	icon=$(cat /usr/share/applications/$app | grep "Icon=" | head -1 | sed 's/.*=//')
+	if ! [[ -z $icon ]]; then
+		icon_path=$(ls /usr/share/pixmaps/ | grep "$icon\.")
+	fi
+	echo $name , $icon_path
+done

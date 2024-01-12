@@ -1,0 +1,183 @@
+* {
+	all: unset;
+}
+
+$background: rgb(255, 243, 235, 0.3);
+$border: rgb(250, 243, 235, 0.5);
+$main: #EA9D34;
+$dark: #403D52;
+$black: #191724;
+$red: #D63230;
+$blue: #2999CB;
+$pink: #3D348B;
+$green: #88D18A;
+$unfocused: #6E6A86;
+
+$font-1: Economica;
+$font-2: JetBrains Mono Nerd Font;
+
+.panel{
+	background-color: $background;
+	border-color: $border;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 10px;
+	color: $black;
+}
+
+.power{
+	transition: 0.2s;
+	color: $dark;
+	padding: 0 14px 0 10px;
+	border-radius: 50px;
+	margin: 4px 0;
+	font-size: 20px;
+	font-family: $font-2;
+}
+
+.powermenu > * > .power{
+	color: $red;
+	margin-right: 10px;
+}
+
+.powermenu:hover > * > .power:not(:hover){
+	color: $dark;
+}
+
+.power:hover{
+	color: $red;
+	background: $dark;
+	opacity: 0.8;
+}
+
+.workspaces{
+	margin-left: 5px;
+	margin-top: 4px;
+	font-size: 19px;
+	color: $main;
+}
+
+.unfocused{
+	color: $unfocused;
+}
+
+.separator{
+	font-size: 20px;
+	color: $dark;
+	font-family: $font-2;
+}
+
+.cal{
+	background: $background;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10px;
+
+	&.highlight {
+		color: $dark;
+	}
+
+	font-size: 14px;
+
+	font-family: $font-1;
+}
+
+calendar:selected {
+	color: $main;
+	background: $dark;
+}
+
+.volume{
+	padding: 5px;
+	font-size: 24px;
+	color: $blue;
+}
+
+.metric scale trough{
+	background-color: $dark;
+	border-radius: 50px;
+	min-height: 10px;
+	min-width: 100px;
+	margin-left: 10px;
+}
+
+.metric scale trough highlight{
+	background-color: $blue;
+	border-radius: 10px;
+}
+
+.time{
+	font-size: 22px;
+	font-family: $font-1;
+}
+
+.music{
+	color: $pink;
+	font-size: 25px;
+	font-weight: 500;
+	transition: 0.2s;
+	font-family: $font-1;
+}
+
+.part{
+	background: $background;
+	padding: 0 20px;
+	border-radius: 50px;
+}
+
+.playing-false{
+	color: $unfocused;
+}
+
+.input{
+	background-color: $background;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.wallpaper{
+	font-size: 1.5em;
+	padding: 0px 14px 0 10px;
+	margin: 3px -5px 3px -5px;
+	border-radius: 50px;
+	color: $dark;
+	transition: 0.4s;
+}
+
+.wallpaper:hover{
+	color: $main;
+	background: $dark;
+}
+
+.status{
+	font-family: Economica;
+	font-size: 60px;
+	text-shadow: 0px 0px 8px black;
+}
+
+.status-time{
+	font-size: 150px;
+	margin-top: -60px;
+	border-bottom-style: solid;
+	border-image-slice: 1;
+	border-width: 5px;
+	animation: border 5s infinite;
+}
+
+.status-date{
+	font-size: 50px;
+	margin-top: -40px;
+}
+
+@keyframes border{
+	0%{
+		border-image-source: linear-gradient(90deg, #F3B700, #FC7A57);
+	}
+	50%{
+		border-image-source: linear-gradient(90deg, #FC7A57, #F3B700);
+	}
+	100%{
+		border-image-source: linear-gradient(90deg, #F3B700, #FC7A57);
+	}
+}

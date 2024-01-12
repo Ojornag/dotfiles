@@ -1,0 +1,19 @@
+#!/bin/sh
+
+song=$(playerctl metadata title -p spotify)
+artist=$(playerctl metadata artist -p spotify)
+
+string="${artist} | ${song}"
+
+if [[ ${#string} -gt 40 ]]; then
+	echo ${string:0:37}...
+else
+	echo $string
+fi
+
+status=$(playerctl status -p spotify)
+if [[ $status = "Playing" ]]; then
+	eww update playing=true
+else
+	eww update playing=false
+fi

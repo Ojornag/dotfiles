@@ -1,0 +1,11 @@
+#!/bin/sh
+
+cal_toggle=$(eww get cal_toggle)
+
+if [[ $cal_toggle = "true" ]]; then
+	eww open calendar_window
+	eww update cal_toggle=false
+else
+	eww close calendar_window
+	eww update cal_toggle=true
+fi

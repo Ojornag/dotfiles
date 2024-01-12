@@ -1,0 +1,36 @@
+#!/bin/sh
+
+workspaces() {
+	# Check ocuppied workspaces
+	occupied=()
+	for i in $(hyprctl workspaces | grep "ID " | sed 's/.*ID \([[:digit:]]*\).*/\1/g'); do
+		occupied[$i-1]=1;
+	done
+
+	# Get focused workspace
+	focused=$(hyprctl activeworkspace | grep "ID " | sed 's/.*ID \([[:digit:]]*\).*/\1/g')
+
+	#Add text to final string
+	final=''
+
+	for ((i=0;i<10;i++)); do
+		if [ -z ${occupied[$i]} ]; then
+			final+="(box :class 'unfocused' "
+		else
+			final+="(box "
+		fi
+
+		index=$((i+1))
+		if [ $focused = $index ]; then
+			final+="' ')"
+		else
+			final+="' ')"
+		fi
+	done
+
+	echo "(box :class 'workspaces' $final )"
+}
+workspaces
+socat -u UNIX-CONNECT:/tmp/hypr/"$HYPRLAND_INSTANCE_SIGNATURE"/.socket2.sock - | while read -r event; do 
+workspaces "$event"
+done
