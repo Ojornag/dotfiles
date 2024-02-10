@@ -16,7 +16,6 @@
 ; Main bar
 
 (defwindow bar 
-	:monitor 1
 	:geometry
 	(
 		geometry
@@ -171,7 +170,6 @@
 ; Status widget
 
 (defwindow status_window
-	:monitor 1
 	:geometry
 	(
 		geometry
@@ -204,7 +202,6 @@
 ; Calendar
 
 (defwindow calendar_window
-	:monitor 1
 	:geometry
 	(
 		geometry
@@ -227,38 +224,5 @@
 		:day day
 		:month month
 		:year year
-	)
-)
-
-; D menu
-
-(defwindow dmenu
-	:monitor 0
-	:geometry
-	(
-		geometry
-		:anchor "center center"
-		:x "0"
-		:y "0"
-		:width "30%"
-		:height "30%"
-	)
-
-	:stacking "fg"
-	:exclusive "false"
-	:focusable "false"
-	(menu)
-)
-
-(defwidget menu[]
-	(box
-		:class "panel"
-		:orientation "v"
-		:space-evenly "false"
-		(input
-			:class "input"
-			:value "google chrome"
-			:height "10%"
-		)
 	)
 )
