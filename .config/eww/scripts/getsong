@@ -3,12 +3,12 @@
 song=$(playerctl metadata title -p spotify)
 artist=$(playerctl metadata artist -p spotify)
 
-string="${artist} | ${song}"
+string="  ${artist} - ${song}"
 
 if [[ ${#string} -gt 40 ]]; then
-	echo ${string:0:37}...
+	echo "${string:0:37}..."
 else
-	echo $string
+	echo "${string}"
 fi
 
 status=$(playerctl status -p spotify)
