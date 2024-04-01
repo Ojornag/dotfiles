@@ -2,7 +2,7 @@ categories=("anime" "evangelion" "minimal" "radium" "centered")
 
 category=${categories[$(($RANDOM % ${#categories[@]}))]}
 
-link=$(curl https://api.github.com/repos/dharmx/walls/git/trees/main | jq -r ".tree[] | select(.path=='$category')" | jq -r ".url")
+link=$(curl https://api.github.com/repos/dharmx/walls/git/trees/main | jq -r ".tree[] | select(.path==\"$category\")" | jq -r ".url")
 
 dir=$(curl $link)
 
