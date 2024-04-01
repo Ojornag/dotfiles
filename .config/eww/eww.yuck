@@ -3,7 +3,6 @@
 (defvar volume_toggle false)
 (defvar cal_toggle true)
 (defvar playing false)
-(defvar wallpaper -1)
 (defpoll volume :interval "1s" "scripts/getvol")
 (defpoll time :interval "5s" "date '+%H:%M'")
 (defpoll day :interval "1h" "date '+%d'")
@@ -91,7 +90,7 @@
 (defwidget wallpaper_changer[]
 	(button
 		:class "wallpaper"
-		:onclick "sh /home/ojornag/wallpapers/wallpaper.sh ${wallpaper} &"
+		:onclick "sh /home/ojornag/wallpapers/wallpaper.sh &"
 		"󰄄"
 	)
 )

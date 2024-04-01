@@ -1,13 +1,17 @@
-number=$(ls /home/ojornag/wallpapers/ | grep '[[:digit:]]' | tail -n 1 | sed 's/\([[:digit:]]*\).png/\1/')
+categories=("anime" "evangelion" "minimal" "radium" "centered")
 
-wallpaper=$1
+category=${categories[$(($RANDOM % ${#categories[@]}))]}
 
-if [[ $1 = -1 ]]; then
-	wallpaper=$RANDOM
-fi
+link=$(curl https://api.github.com/repos/dharmx/walls/git/trees/main | jq -r ".tree[] | select(.path=='$category')" | jq -r ".url")
 
-wallpaper=$((wallpaper % (number + 1)))
+dir=$(curl $link)
 
-eww update wallpaper=$((wallpaper + 1))
+wallpaper=$(echo $dir | jq -r ".tree[1:][$RANDOM % length].path")
 
-swww img --transition-type center /home/ojornag/wallpapers/${wallpaper}.png
+wget "https://github.com/dharmx/walls/raw/main/$category/$wallpaper"
+
+convert $wallpaper "/home/ojornag/wallpapers/wallpaper.png"
+
+rm $wallpaper
+
+swww img --transition-type center /home/ojornag/wallpapers/wallpaper.png
