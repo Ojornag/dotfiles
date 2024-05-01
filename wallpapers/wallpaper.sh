@@ -1,4 +1,4 @@
-categories=("anime" "evangelion" "minimal" "radium" "centered")
+categories=("anime" "evangelion" "radium" "centered")
 
 cat_rand=$RANDOM
 echo "\n\n$cat_rand\n\n"
