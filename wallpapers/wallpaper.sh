@@ -1,21 +1,7 @@
-categories=("anime" "evangelion" "radium" "centered")
+path=/home/ojornag/wallpapers/
 
-cat_rand=$RANDOM
-echo "\n\n$cat_rand\n\n"
-category=${categories[$(($cat_rand % ${#categories[@]}))]}
+wallpaper_number=$(($(ls $path -1 | wc -l) - 1))
 
-link=$(curl https://api.github.com/repos/dharmx/walls/git/trees/main | jq -r ".tree[] | select(.path==\"$category\") | .url")
+random_wallpaper=$(($RANDOM % $wallpaper_number))
 
-dir=$(curl $link)
-
-wall_rand=$RANDOM
-echo "\n\n$wall_rand\n\n"
-wallpaper=$(echo $dir | jq -r ".tree | .[1:][$wall_rand % length].path")
-
-wget "https://github.com/dharmx/walls/raw/main/$category/$wallpaper"
-
-convert $wallpaper "/home/ojornag/wallpapers/wallpaper.png"
-
-rm $wallpaper
-
-swww img --transition-type center /home/ojornag/wallpapers/wallpaper.png
+swww img --transition-type center $path/$random_wallpaper.*
