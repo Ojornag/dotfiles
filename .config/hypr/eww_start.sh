@@ -7,4 +7,4 @@ fi
 hyprctl dispatch focusmonitor $monitor_id
 
 eww open bar --screen $monitor_id
-#eww open status_window --screen $monitor_id
+eww open status_window --screen $monitor_id
