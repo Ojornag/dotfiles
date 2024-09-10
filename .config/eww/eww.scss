@@ -4,13 +4,15 @@
 
 $background: rgb(255, 243, 235, 0.3);
 $border: rgb(250, 243, 235, 0.5);
+$white: rgb(250, 243, 235);
 $main: #EA9D34;
 $dark: #403D52;
 $black: #191724;
 $red: #D63230;
-$blue: #2999CB;
+$blue: #0060AB;
 $pink: #3D348B;
 $green: #168d40;
+$neon: #10E010;
 $unfocused: #6E6A86;
 
 $font-1: Economica;
@@ -104,6 +106,42 @@ calendar:selected {
 .metric scale trough highlight{
 	background-color: $blue;
 	border-radius: 10px;
+}
+
+.battery scale trough{
+    background-color: $dark;
+    min-height: 16px;
+    border-radius: 3px;
+    padding: 1px;
+}
+
+.battery scale highlight{
+    border-radius: 3px;
+}
+
+.battery{
+    margin-left: -32px;
+    margin-right: -38px;
+    color: $white;
+}
+
+.battery-text{
+    margin: 0 0 0 -67px;
+    font-size: 14px;
+}
+
+.battery-top{
+    margin: 16px -1px 16px 31px;
+    border-radius: 3px 0 0 3px;
+    background-color: $dark;
+}
+
+.Discharging highlight{
+    background-color: $main;
+}
+
+.Charging highlight{
+    background-color: $neon;
 }
 
 .time{
