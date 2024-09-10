@@ -22,6 +22,9 @@ yellow = "#FFD866"
 background = "#2D2A2E"
 foreground = "#FCFCFA"
 
+[font]
+size=13.0
+
 [font.bold]
 family = "JetBrains Mono NL Nerd Font"
 style = "bold"
