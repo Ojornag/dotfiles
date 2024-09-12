@@ -1,3 +1,7 @@
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/Gruvbox-Dark.toml"
+]
+
 [colors.bright]
 black = "#727072"
 blue = "#FC9867"
@@ -23,24 +27,24 @@ background = "#2D2A2E"
 foreground = "#FCFCFA"
 
 [font]
-size=13.0
+size = 13
 
-[font.bold]
-family = "JetBrains Mono NL Nerd Font"
-style = "bold"
+  [font.bold]
+  family = "JetBrains Mono NL Nerd Font"
+  style = "bold"
 
-[font.italic]
-family = "JetBrains Mono NL Nerd Font"
-style = "italic"
+  [font.italic]
+  family = "JetBrains Mono NL Nerd Font"
+  style = "italic"
 
-[font.normal]
-family = "JetBrains Mono NL Nerd Font"
-style = "regular"
+  [font.normal]
+  family = "JetBrains Mono NL Nerd Font"
+  style = "regular"
 
 [window]
 decorations = "none"
 opacity = 0.9
 
-[window.padding]
-x = 5
-y = 5
+  [window.padding]
+  x = 5
+  y = 5

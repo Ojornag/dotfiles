@@ -1,9 +1,0 @@
-require('rose-pine').setup({
-	variant="moon",
-	styles={
-		transparency=true,
-		bold=true,
-		italic=true
-	}
-})
-vim.cmd.colorscheme('rose-pine')

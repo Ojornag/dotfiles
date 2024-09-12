@@ -9,10 +9,6 @@ end)
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
-vim.api.nvim_set_hl(0, "CmpNormal", {bg="none"})
-vim.api.nvim_set_hl(0, "CmpBorder", {bg="none"})
-vim.api.nvim_set_hl(0, "CmpCursor", {bg="#474044"})
-
 local cmp = require('cmp')
 cmp.setup {
 	window = {
