@@ -15,7 +15,7 @@
 
 ; Main bar
 
-(defwindow bar 
+(defwindow bar
 	:geometry
 	(
 		geometry
@@ -29,7 +29,7 @@
 	:stacking "fg"
 	:exclusive "true"
 	:focusable: "false"
-	
+
 	(panel)
 )
 
@@ -85,7 +85,7 @@
 (defwidget workspaces[]
 	(literal
 		:class "workspaces"
-		:content 
+		:content
 		workspace
 	)
 )
@@ -139,8 +139,8 @@
 			:value {EWW_BATTERY["BAT0"].capacity}
 		)
 		(box
-		 :class "battery-text"
-		 "${EWW_BATTERY["BAT0"].capacity}%"
+			:class "battery-text"
+			"${EWW_BATTERY["BAT0"].capacity}%"
 		)
 	)
 )

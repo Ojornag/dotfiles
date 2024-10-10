@@ -1,5 +1,5 @@
 * {
-	all: unset;
+    all: unset;
 }
 
 $background: rgb(255, 243, 235, 0.3);
@@ -19,93 +19,93 @@ $font-1: Economica;
 $font-2: JetBrains Mono Nerd Font;
 
 .panel{
-	background-color: $background;
-	border-color: $border;
-	border-width: 2px;
-	border-style: solid;
-	border-radius: 10px;
-	color: $black;
+    background-color: $background;
+    border-color: $border;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    color: $black;
 }
 
 .power{
-	transition: 0.2s;
-	color: $dark;
-	padding: 0 14px 0 10px;
-	border-radius: 50px;
-	margin: 4px 0;
-	font-size: 20px;
-	font-family: $font-2;
+    transition: 0.2s;
+    color: $dark;
+    padding: 0 14px 0 10px;
+    border-radius: 50px;
+    margin: 4px 0;
+    font-size: 20px;
+    font-family: $font-2;
 }
 
 .powermenu > * > .power{
-	color: $red;
-	margin-right: 10px;
+    color: $red;
+    margin-right: 10px;
 }
 
 .powermenu:hover > * > .power:not(:hover){
-	color: $dark;
+    color: $dark;
 }
 
 .power:hover{
-	color: $red;
-	background: $dark;
-	opacity: 0.8;
+    color: $red;
+    background: $dark;
+    opacity: 0.8;
 }
 
 .workspaces{
-	margin-left: 5px;
-	margin-top: 4px;
-	font-size: 19px;
-	color: $main;
+    margin-left: 5px;
+    margin-top: 4px;
+    font-size: 19px;
+    color: $main;
 }
 
 .unfocused{
-	color: $unfocused;
+    color: $unfocused;
 }
 
 .separator{
-	font-size: 20px;
-	color: $dark;
-	font-family: $font-2;
+    font-size: 20px;
+    color: $dark;
+    font-family: $font-2;
 }
 
 .cal{
-	background: $background;
-	border-style: solid;
-	border-width: 2px;
-	border-radius: 10px;
+    background: $background;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
 
-	&.highlight {
-		color: $dark;
-	}
+    &.highlight {
+        color: $dark;
+    }
 
-	font-size: 14px;
+    font-size: 14px;
 
-	font-family: $font-1;
+    font-family: $font-1;
 }
 
 calendar:selected {
-	color: $main;
-	background: $dark;
+    color: $main;
+    background: $dark;
 }
 
 .volume{
-	padding: 5px;
-	font-size: 24px;
-	color: $blue;
+    padding: 5px;
+    font-size: 24px;
+    color: $blue;
 }
 
 .metric scale trough{
-	background-color: $dark;
-	border-radius: 50px;
-	min-height: 10px;
-	min-width: 100px;
-	margin-left: 10px;
+    background-color: $dark;
+    border-radius: 50px;
+    min-height: 10px;
+    min-width: 100px;
+    margin-left: 10px;
 }
 
 .metric scale trough highlight{
-	background-color: $blue;
-	border-radius: 10px;
+    background-color: $blue;
+    border-radius: 10px;
 }
 
 .battery scale trough{
@@ -145,52 +145,52 @@ calendar:selected {
 }
 
 .time{
-	font-size: 22px;
-	font-family: $font-1;
+    font-size: 22px;
+    font-family: $font-1;
 }
 
 .music{
-	color: $green;
-	font-size: 25px;
-	font-weight: 500;
-	transition: 0.2s;
-	font-family: $font-1;
+    color: $green;
+    font-size: 25px;
+    font-weight: 500;
+    transition: 0.2s;
+    font-family: $font-1;
 }
 
 .part{
-	background: $background;
-	padding: 0 20px;
-	border-radius: 50px;
+    background: $background;
+    padding: 0 20px;
+    border-radius: 50px;
 }
 
 .playing-false{
-	color: $unfocused;
+    color: $unfocused;
 }
 
 .input{
-	background-color: $background;
-	border-radius: 10px;
-	padding: 5px;
-	margin: 5px;
+    background-color: $background;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 
 .wallpaper{
-	font-size: 1.5em;
-	padding: 0px 14px 0 10px;
-	margin: 3px -5px 3px -5px;
-	border-radius: 50px;
-	color: $dark;
-	transition: 0.4s;
+    font-size: 1.5em;
+    padding: 0px 14px 0 10px;
+    margin: 3px -5px 3px -5px;
+    border-radius: 50px;
+    color: $dark;
+    transition: 0.4s;
 }
 
 .wallpaper:hover{
-	color: $main;
-	background: $dark;
+    color: $main;
+    background: $dark;
 }
 
 .status{
-	font-family: Economica;
-	font-size: 60px;
+    font-family: Economica;
+    font-size: 60px;
     border-width: 2px;
     border-color: $border;
     border-style: solid;
@@ -199,25 +199,25 @@ calendar:selected {
 }
 
 .status-time{
-	font-size: 150px;
-	margin-top: -60px;
-	border-bottom-style: solid;
+    font-size: 150px;
+    margin-top: -60px;
+    border-bottom-style: solid;
     border-color: $border;
     border-width: 2px;
 }
 
 .status-date{
-	font-size: 45px;
+    font-size: 45px;
 }
 
 @keyframes border{
-	0%{
-		border-image-source: linear-gradient(90deg, #F3B700, #FC7A57);
-	}
-	50%{
-		border-image-source: linear-gradient(90deg, #FC7A57, #F3B700);
-	}
-	100%{
-		border-image-source: linear-gradient(90deg, #F3B700, #FC7A57);
-	}
+    0%{
+        border-image-source: linear-gradient(90deg, #F3B700, #FC7A57);
+    }
+    50%{
+        border-image-source: linear-gradient(90deg, #FC7A57, #F3B700);
+    }
+    100%{
+        border-image-source: linear-gradient(90deg, #F3B700, #FC7A57);
+    }
 }

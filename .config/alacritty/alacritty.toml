@@ -1,5 +1,5 @@
 import = [
-  "/usr/lib/node_modules/alacritty-themes/themes/Gruvbox-Dark.toml"
+	"/usr/lib/node_modules/alacritty-themes/themes/Gruvbox-Dark.toml"
 ]
 
 [colors.bright]
@@ -29,22 +29,22 @@ foreground = "#FCFCFA"
 [font]
 size = 13
 
-  [font.bold]
-  family = "JetBrains Mono NL Nerd Font"
-  style = "bold"
+	[font.bold]
+	family = "JetBrains Mono NL Nerd Font"
+	style = "bold"
 
-  [font.italic]
-  family = "JetBrains Mono NL Nerd Font"
-  style = "italic"
+	[font.italic]
+	family = "JetBrains Mono NL Nerd Font"
+	style = "italic"
 
-  [font.normal]
-  family = "JetBrains Mono NL Nerd Font"
-  style = "regular"
+	[font.normal]
+	family = "JetBrains Mono NL Nerd Font"
+	style = "regular"
 
 [window]
 decorations = "none"
 opacity = 0.9
 
-  [window.padding]
-  x = 5
-  y = 5
+	[window.padding]
+	x = 5
+	y = 5
