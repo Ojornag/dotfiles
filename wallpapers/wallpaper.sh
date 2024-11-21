@@ -1,4 +1,4 @@
-path=/home/ojornag/wallpapers/
+path=/home/ojornag/wallpapers
 
 wallpaper_number=$(($(ls $path -1 | wc -l) - 1))
 
