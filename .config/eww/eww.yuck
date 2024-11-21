@@ -4,6 +4,7 @@
 (defvar cal_toggle true)
 (defvar playing false)
 (defvar current_wallpaper 0)
+(defvar current_album "album.jpg")
 (defpoll volume :interval "1s" "scripts/getvol")
 (defpoll time :interval "5s" "date '+%H:%M'")
 (defpoll day :interval "1h" "date '+%d'")
@@ -198,9 +199,9 @@
 	(
 		geometry
 		:anchor "top center"
-		:width "25%"
-		:height "25%"
-		:y "300"
+		:width "15%"
+		:height "15%"
+		:y "250"
 	)
 	:stacking "bg"
 	:namespace ""
@@ -210,15 +211,21 @@
 (defwidget status[]
 	(box
 		:orientation "v"
-		:class "status"
-		day_week
-		(box
-			:class "status-time"
-			time
+		(image
+			:path current_album
 		)
 		(box
-			:class "status-date"
-			date
+			:orientation "v"
+			:class "status"
+			day_week
+			(box
+				:class "status-time"
+				time
+			)
+			(box
+				:class "status-date"
+				date
+			)
 		)
 	)
 )

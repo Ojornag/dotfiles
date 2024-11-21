@@ -1,7 +1,10 @@
 #!/bin/sh
 
+path="/home/ojornag/.config/eww"
+
 song=$(playerctl metadata title -p spotify)
 artist=$(playerctl metadata artist -p spotify)
+album=$(playerctl metadata mpris:artUrl -p spotify)
 
 string="  ${artist} - ${song}"
 
@@ -16,4 +19,12 @@ if [[ $status = "Playing" ]]; then
 	eww update playing=true
 else
 	eww update playing=false
+fi
+
+current=$(eww get current_album)
+if [[ $current != "$song.jpeg" ]]; then
+	rm $path/*.jpeg
+	wget $album -P $path/ -O "$song.jpeg"
+	magick "$path/$song.jpeg" -resize 400x400 "$path/$song.jpeg"
+	eww update current_album="$song.jpeg"
 fi
