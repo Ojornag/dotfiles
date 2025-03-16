@@ -1,10 +1,10 @@
 * {
 	background-color: #00000000;
-	background: #FFF3EBA0;
-	border: #FAF3EBD0;
-	main: #EA9D34;
-	dark: #403D53;
-	black: #191724;
+	background: #242438;
+	border: #B4BEFE;
+	main: #F5C2E7;
+	dark: #EBA0AC;
+	text: #F2CDCD;
 	red: #D63230;
 	blue: #2999CB;
 	font: "JetBrains Mono Nerd Font 13";
@@ -15,7 +15,7 @@ window {
 	anchor:   center;
 	padding: 0px;
 	border:  0px;
-	border-radius: 10px;
+	border-radius: 5px;
 	color: white;
 	background-color: transparent;
 	spacing: 0;
@@ -34,10 +34,10 @@ message {
 }
 message {
 	font: "JetBrains Mono Nerd Font 8";
-	color: @black;
+	color: @text;
 }
 inputbar {
-	color: @black;
+	color: @text;
 	padding: 10px;
 	background-color: @background;
 	border: 2px 2px 2px 2px;
@@ -67,7 +67,7 @@ element {
 	vertical-align: 0.5;
 	border-radius: 4px;
 	background-color: transparent;
-	color: @black;
+	color: @text;
 	font:inherit;
 }
 element-text {
@@ -76,6 +76,7 @@ element-text {
 }
 element selected.normal {
 	background-color: @main;
+	color: @background;
 }
 element normal active {
 	foreground: @blue;
@@ -93,11 +94,11 @@ element alternate urgent {
 }
 element selected active {
 	background-color: @main;
-	foreground: @black;
+	foreground: @text;
 }
 element selected urgent {
 	background-color: @red;
-	foreground: @black;
+	foreground: @text;
 }
 element normal normal {
 
