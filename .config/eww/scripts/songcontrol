@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [[ $1 = "up" ]]; then
-	playerctl next -p spotify
-else
-	playerctl previous -p spotify
-fi

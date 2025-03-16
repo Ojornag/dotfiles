@@ -1,7 +1,0 @@
-#!/bin/sh
-
-line=$(pulseaudio-ctl | grep "Volume level" | sed -e 's/\x1b\[[0-9;]*m//g')
-
-num=$(echo $line | sed 's/.*: \([[:digit:]]*\).*/\1/')
-
-echo $num
