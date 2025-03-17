@@ -134,7 +134,7 @@
   "menus.dashboard.directories.right.directory3.command": "bash -c \"nemo $HOME/\"",
   "theme.bar.background": "#11111b",
   "theme.bar.buttons.style": "default",
-  "bar.workspaces.monitorSpecific": true,
+  "bar.workspaces.monitorSpecific": false,
   "bar.workspaces.applicationIconOncePerWorkspace": true,
   "menus.clock.weather.location": "Barcelona",
   "menus.clock.weather.unit": "metric",
