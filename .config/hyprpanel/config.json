@@ -3,7 +3,7 @@
   "tear": true,
   "theme.font.weight": 600,
   "theme.font.size": "1rem",
-  "theme.bar.scaling": 85,
+  "theme.bar.scaling": 95,
   "theme.bar.floating": true,
   "theme.bar.buttons.enableBorders": true,
   "theme.bar.buttons.borderSize": "0.1em",
@@ -52,38 +52,9 @@
       ],
       "right": [
         "volume",
+		"bluetooth",
         "network",
         "battery",
-        "clock",
-        "notifications"
-      ]
-    },
-    "1": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
-        "clock",
-        "notifications"
-      ]
-    },
-    "2": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
         "clock",
         "notifications"
       ]
