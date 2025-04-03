@@ -15,8 +15,6 @@ vim.opt.scrolloff = 8
 
 vim.g.airline_theme = 'base16'
 vim.g.airline_powerline_fonts = 1
-vim.g.airline_left_sep = ''
-vim.g.airline_right_sep = ''
 
 vim.g.vimtex_view_method = 'zathura'
 vim.g.maplocalleader = ','
