@@ -5,17 +5,6 @@
                 "scale": 1
             }
         },
-        "font": {
-            "family": {
-                "clock": "Rubik",
-                "material": "Material Symbols Rounded",
-                "mono": "CaskaydiaCove NF",
-                "sans": "Rubik"
-            },
-            "size": {
-                "scale": 1
-            }
-        },
         "padding": {
             "scale": 1
         },
@@ -27,21 +16,28 @@
         },
         "transparency": {
             "base": 0.9,
-            "enabled": false,
+            "enabled": true,
             "layers": 0.8
         }
     },
     "background": {
         "desktopClock": {
-            "enabled": true
+            "background": {
+                "enabled": false
+            },
+            "enabled": true,
+            "invertColors": false,
+            "shadow": {
+                "enabled": true
+            }
         },
         "enabled": true,
         "visualiser": {
-            "autoHide": true,
+            "autoHide": false,
             "blur": false,
             "enabled": true,
             "rounding": 1,
-            "spacing": 1
+            "spacing": 0.4230031823873122
         }
     },
     "bar": {
@@ -99,15 +95,6 @@
             "workspaces": true
         },
         "showOnHover": true,
-        "status": {
-            "showAudio": true,
-            "showBattery": true,
-            "showBluetooth": true,
-            "showKbLayout": false,
-            "showLockStatus": true,
-            "showMicrophone": false,
-            "showNetwork": true
-        },
         "tray": {
             "background": false,
             "compact": false,
@@ -119,11 +106,10 @@
             "activeIndicator": true,
             "activeLabel": "󰮯",
             "activeTrail": false,
-            "capitalisation": "preserve",
+            "capitalisation": "Preserve",
             "label": "  ",
             "occupiedBg": true,
             "occupiedLabel": "󰮯",
-            "perMonitorWorkspaces": true,
             "showWindows": false,
             "showWindowsOnSpecialWorkspaces": false,
             "shown": 5,
@@ -160,12 +146,14 @@
             "criticalLevel": 3,
             "warnLevels": [
                 {
+                    "critical": false,
                     "icon": "battery_android_frame_2",
                     "level": 20,
                     "message": "You might want to plug in a charger",
                     "title": "Low battery"
                 },
                 {
+                    "critical": false,
                     "icon": "battery_android_frame_1",
                     "level": 10,
                     "message": "You should probably plug in a charger <b>now</b>",
@@ -185,19 +173,31 @@
             "lockBeforeSleep": true,
             "timeouts": [
                 {
+                    "enabled": true,
                     "idleAction": "lock",
+                    "inhibitWhenAudio": false,
+                    "inhibitWhenCharging": false,
+                    "respectInhibitors": true,
                     "timeout": 180
                 },
                 {
+                    "enabled": true,
                     "idleAction": "dpms off",
+                    "inhibitWhenAudio": false,
+                    "inhibitWhenCharging": false,
+                    "respectInhibitors": true,
                     "returnAction": "dpms on",
                     "timeout": 300
                 },
                 {
+                    "enabled": true,
                     "idleAction": [
                         "systemctl",
                         "suspend-then-hibernate"
                     ],
+                    "inhibitWhenAudio": false,
+                    "inhibitWhenCharging": false,
+                    "respectInhibitors": true,
                     "timeout": 600
                 }
             ]
@@ -396,8 +396,10 @@
     },
     "services": {
         "audioIncrement": 0.1,
+        "clockFormat": "TwentyFourHour",
+        "dataUnits": "Decimal",
         "defaultPlayer": "Spotify",
-        "gpuType": "",
+        "gpuType": "Auto",
         "maxVolume": 1,
         "playerAliases": [
             {
@@ -405,11 +407,10 @@
                 "to": "YT Music"
             }
         ],
-        "smartScheme": true,
-        "useFahrenheit": false,
-        "useTwelveHourClock": false,
+        "smartScheme": false,
         "visualiserBars": 45,
-        "weatherLocation": "Badalona"
+        "weatherLocation": "Badalona",
+        "weatherUnits": "Celsius"
     },
     "session": {
         "commands": {
@@ -458,8 +459,18 @@
         "vpn": {
             "enabled": false,
             "provider": [
-                "netbird"
-            ]
+                {
+                    "connectCmd": [
+                    ],
+                    "disconnectCmd": [
+                    ],
+                    "displayName": "",
+                    "id": "vpn-mumx5g8p-2fmdy",
+                    "interface": "",
+                    "name": ""
+                }
+            ],
+            "selectedProvider": "vpn-mumx5g8p-2fmdy"
         }
     }
 }
