@@ -1,6 +1,6 @@
 hl.monitor({
     output   = "",
-    mode     = "highrr",
+    mode     = "highres",
     position = "auto",
     scale    = "auto",
 })
@@ -13,6 +13,7 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd("caelestia wallpaper -r")
 	hl.exec_cmd("caelestia scheme set -n dynamic -m dark")
 	hl.exec_cmd("spotify")
+	hl.exec_cmd("discord")
 end)
 
 
@@ -173,6 +174,11 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 hl.window_rule({
 	match = { class = "Spotify" },
 	workspace = "10 silent"
+})
+
+hl.window_rule({
+	match = { class = "discord" },
+	workspace = "9 silent"
 })
 
 hl.window_rule({
