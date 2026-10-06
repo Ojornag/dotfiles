@@ -24,9 +24,6 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ "mason-org/mason.nvim", opts = {}},
-		{ "nvim-lua/plenary.nvim" },
-		{ "ThePrimeagen/harpoon" },
 		{ import = "plugins" },
 	},
 })

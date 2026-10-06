@@ -25,6 +25,7 @@ return{
 					PmenuExtra = { bg = "none"},
 					PmenuSbar = { bg = "none"},
 					PmenuThumb = { bg = "none"},
+					TelescopeBorder = { bg = "none"},
 
 					-- Save an hlgroup with dark background and dimmed foreground
 					-- so that you can use it where your still want darker windows.

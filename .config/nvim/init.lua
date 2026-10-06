@@ -9,6 +9,8 @@ vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "Go to the up window" })
 vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "Go to the right window" })
 vim.keymap.set("n", "<leader>o", "A{}<Esc>i<Cr><Esc>O", { desc = "Add {}" })
 
+vim.o.signcolumn = "yes"
+
 vim.o.tabstop = 4
 vim.o.expandtab = false
 vim.o.softtabstop = 4
